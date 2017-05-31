@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>BackboneJS - Todo UnStyled</title>
+        <link rel="stylesheet" href="css/app.css"/>
+    </head>
+    <body>
+
+        <script type="text/html" id="stats-template">
+
+            <div>
+                <span>Done: <%= done %> Remaining: <%= remaining %></span>
+                <a href="javascript:void(0)" id="clear-completed">Clear Completed</a>
+            </div>
+
+        </script>
+
+
+        <script type="text/html" id="item-template">
+
+            <%
+                print( done ?
+                            '<input type="checkbox" class="toggle" checked/>' :
+                            '<input type="checkbox" class="toggle"/>'
+                )
+            %>
+            <%= order %>
+            <span class="view"><%= title %></span>
+            <input type="text" value="<%= title %>" class="edit"/>
+            <a href="javascript:void(0)" class="destroy">Destroy</a>
+
+        </script>
+
+
+        <div id="todoApp">
+            What to do? <input id="new-todo"/>
+            <div id="main">
+                <ul>
+                    <li><input type="checkbox" id="toggle-all"/> Done</li>
+                </ul>
+                <ul id="todo-list">
+                </ul>
+            </div>
+            <footer>
+
+            </footer>
+        </div>
+
+
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/json2/json2.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/backbone.localStorage/index.js"></script>
+        <!-- endbower -->
+
+
+        <script src="todos.js"></script>
+    </body>
+</html>

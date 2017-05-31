@@ -1,0 +1,19 @@
+/* line 7, ../sass/app.scss */
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+/* line 10, ../sass/app.scss */
+ul li input[type="text"] {
+  display: none;
+}
+
+/* line 16, ../sass/app.scss */
+ul li.editing input[type="text"] {
+  display: inline;
+}
+/* line 20, ../sass/app.scss */
+ul li.editing span {
+  display: none;
+}

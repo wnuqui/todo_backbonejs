@@ -1,0 +1,23 @@
+@mixin list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+ul li {
+  @include list;
+
+  input[type="text"] {
+    display: none;
+  }
+}
+
+ul {
+  li.editing input[type="text"] {
+    display: inline;
+  }
+
+  li.editing span {
+    display: none;
+  }
+}
